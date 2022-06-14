@@ -31,6 +31,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+       - name: Build
+      run: go build -v ./...
+
       - name: Running Unit Tests
         run: go test -v
 
@@ -47,6 +50,9 @@ jobs:
 
       - name: Checkout repo
         uses: actions/checkout@v2
+
+       - name: Build
+      run: go build -v ./...
 
       - name: Running Unit Tests
         run: go test -v
