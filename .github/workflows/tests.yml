@@ -6,7 +6,6 @@ on:
 jobs:
   unit-tests-ubuntu:
     name: Unit Tests Ubuntu
-    needs: dependencies
     runs-on: ubuntu-20.04
 
     steps:
@@ -18,7 +17,6 @@ jobs:
     
   unit-tests-windows:
     name: Unit Tests Windows
-    needs: dependencies
     runs-on: windows-latest
 
     steps:
@@ -30,7 +28,6 @@ jobs:
 
   unit-tests-macos:
     name: Unit Tests Windows
-    needs: dependencies
     runs-on: 	macos-12
 
     steps:
