@@ -1,0 +1,41 @@
+name: Tests
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  unit-tests-ubuntu:
+    name: Unit Tests Ubuntu
+    needs: dependencies
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Running Unit Tests
+        run: go test -v
+    
+  unit-tests-windows:
+    name: Unit Tests Windows
+    needs: dependencies
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Running Unit Tests
+        run: go test -v
+
+  unit-tests-macos:
+    name: Unit Tests Windows
+    needs: dependencies
+    runs-on: 	macos-12
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Running Unit Tests
+        run: go test -v
